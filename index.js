@@ -35,6 +35,3 @@ submitBtn.addEventListener("click", () => {
             resultDiv.innerHTML = `<p id="error-message">${error.message}</p>`;
         });
 });
-
-
-
