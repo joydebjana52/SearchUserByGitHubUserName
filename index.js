@@ -1,5 +1,6 @@
 const submitBtn = document.getElementById("submit-btn");
 const resultDiv = document.getElementById("result");
+const inputBox = document.getElementById("username");
 
 submitBtn.addEventListener("click", () => {
     const username = document.getElementById("username").value;
@@ -21,10 +22,12 @@ submitBtn.addEventListener("click", () => {
                         for (const repo of reposData) {
                             const repoItem = document.createElement("li");
                             const repoLink = document.createElement("a");
+                            const breakItem= document.createElement("br");
                             repoLink.href = repo.html_url;
                             repoLink.textContent = repo.name;
                             repoItem.appendChild(repoLink);
                             repoList.appendChild(repoItem);
+                            repoList.appendChild(breakItem);
                         }
                         resultDiv.innerHTML = `<img src="${imageSrc}" alt="User Image"><h2>Repositories:</h2>`;
                         resultDiv.appendChild(repoList);
@@ -34,4 +37,5 @@ submitBtn.addEventListener("click", () => {
         .catch(error => {
             resultDiv.innerHTML = `<p id="error-message">${error.message}</p>`;
         });
+        inputBox.value = "";
 });
