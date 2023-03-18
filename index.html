@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>GitHub Repository Details</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <title>GitHub Repositories and User Image</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="container">
-		<h1>GitHub Repository Details</h1>
-		<input type="text" id="username" placeholder="Enter your GitHub username">
-		<button id="fetchBtn" onclick="fetchData()">Fetch Data</button>
-		<div id="user-image"></div>
-		<table id="table">
-			<thead>
-				<tr>
-					<th>Repository Name</th>
-					<th>Description</th>
-					<th>Language</th>
-					<th>Link</th>
-				</tr>
-			</thead>
-			<tbody id="tbody">
-			</tbody>
-		</table>
-	</div>
-	<script src="./index.js"></script>
+    <div class="container">
+        <h1>GitHub Repositories and User Image</h1>
+        <label for="username">Enter your GitHub username:</label>
+        <input type="text" id="username" name="username" required>
+        <button id="submit-btn">Submit</button>
+        <div id="result"></div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
+
+
+
